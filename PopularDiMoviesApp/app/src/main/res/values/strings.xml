@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Movies</string>
+    <string name="action_settings">Sort Movies By</string>
+    <string name="title_activity_settings">Sort Movies By</string>
+
+    <!-- Strings related to Settings -->
+    <string name="pref_order_asc">asc</string>
+    <string name="pref_order_desc">desc</string>
+
+    <string name="pref_order_asc_label">Order Asc</string>
+    <string name="pref_order_desc_label">Order Desc</string>
+
+
+    <string name="pref_order_raiting">vote_average</string>
+    <string name="pref_order_popular">popularity</string>
+
+    <string name="pref_order_raiting_label">Rating</string>
+    <string name="pref_order_popular_label">Popularity</string>
+
+
+
+    <string name="pref_order_direction_key">sort</string>
+    <string name="pref_order_field_key">by</string>
+
+    <string name="pref_order_direction_default">desc</string>
+    <string name="pref_order_field_default">popularity</string>
+
+    <string name="pref_order_direction_title">Direction</string>
+    <string name="pref_order_field_title">Order By</string>
+    <string name="title_activity_detail_movie">DetailMovie</string>
+</resources>

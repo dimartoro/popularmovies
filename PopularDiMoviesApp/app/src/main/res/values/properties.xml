@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="api_base_movies">http://api.themoviedb.org/3/discover/movie</string>
+    <string name="api_base_image">http://image.tmdb.org/t/p/w185/</string>
+    <string name="api_value_key_movies"></string>
+    <string name="api_param_key_movies">api_key</string>
+    <string name="api_param_sort_movies">sort_by</string>
+    <string name="api_value_sort_movies">popularity.desc</string>
+    <string name="format_value">json</string>
+    <string name="page_movie">1</string>
+    <string name="array_name">results</string>
+
+</resources>
