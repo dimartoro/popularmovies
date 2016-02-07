@@ -18,7 +18,6 @@
     <string name="pref_order_popular_label">Popularity</string>
 
 
-
     <string name="pref_order_direction_key">sort</string>
     <string name="pref_order_field_key">by</string>
 
@@ -28,4 +27,21 @@
     <string name="pref_order_direction_title">Direction</string>
     <string name="pref_order_field_title">Order By</string>
     <string name="title_activity_detail_movie">DetailMovie</string>
+    <string name="action_save_favorite">Add To Favorite</string>
+    <string name="action_show_favorite">My Favorites</string>
+
+    <string name="pref_favorite_movie">Show Movies</string>
+    <string name="pref_selection_movie_key">selection_movie</string>
+    <string name="pref_selection_movie_default">all_movies</string>
+
+    <string name="pref_all_movie_label">All Movies</string>
+    <string name="pref_favorite_movie_label">Favorite Movie</string>
+
+    <string name="pref_all_movie_value">all_movies</string>
+    <string name="pref_favorite_movie_value">favorite_movies</string>
+
+    <string name="title_trailers">Trailers</string>
+
+    <string name="title_reviews">Reviews</string>
+
 </resources>

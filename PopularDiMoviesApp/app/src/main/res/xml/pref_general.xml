@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
-
 
     <ListPreference
         android:title="@string/pref_order_direction_title"
@@ -19,6 +18,13 @@
         android:defaultValue="@string/pref_order_field_default"
         android:entryValues="@array/pref_values_sort_field_values"
         android:entries="@array/pref_values_sort_field_options" />
+
+    <ListPreference
+        android:title="@string/pref_favorite_movie"
+        android:key="@string/pref_selection_movie_key"
+        android:defaultValue="@string/pref_selection_movie_default"
+        android:entryValues="@array/pref_values_movie_values"
+        android:entries="@array/pref_values_movie_options" />
 
 
 </PreferenceScreen>

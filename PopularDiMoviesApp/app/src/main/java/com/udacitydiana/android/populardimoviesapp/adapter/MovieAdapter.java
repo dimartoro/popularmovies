@@ -2,6 +2,7 @@ package com.udacitydiana.android.populardimoviesapp.adapter;
 
 import android.app.Activity;
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,9 +10,10 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
 import com.udacitydiana.android.populardimoviesapp.R;
-import com.udacitydiana.android.populardimoviesapp.model.Movie;
+import com.udacitydiana.android.populardimoviesapp.rest.model.Movie;
 
 import java.util.List;
 
@@ -30,6 +32,7 @@ public class MovieAdapter extends ArrayAdapter<Movie>{
 
     }
 
+
     @Override
     public View getView(int position, View view, ViewGroup viewGroup){
 
@@ -41,15 +44,34 @@ public class MovieAdapter extends ArrayAdapter<Movie>{
             view = LayoutInflater.from(getContext()).inflate(R.layout.grid_item_movie, viewGroup,false);
             }
 
-        ImageView iconView = (ImageView)view.findViewById(R.id.img_movie);
+        final ImageView iconView = (ImageView)view.findViewById(R.id.img_movie);
         TextView title = (TextView)view.findViewById(R.id.title_movie);
 
         Picasso
                 .with(context)
-                .load(PATH_BASE_IMG+movie.posterPath)
-                .into(iconView);
+                .load(PATH_BASE_IMG + movie.getPosterPath())
 
-        title.setText(movie.title);
+                .into(iconView, new Callback(){
+                    @Override
+                    public void onSuccess() {
+
+                    }
+
+                    @Override
+                    public void onError() {
+                        Log.v(LOG_TAG, "error loading image   :");
+                        Picasso.with(getContext())
+                                .load(R.mipmap.noimageavailable) // image url goes here
+                                .placeholder(iconView.getDrawable())
+                                .into(iconView);
+
+
+                    }
+                });
+                //.into(iconView);
+
+
+        title.setText(movie.getTitle());
 
         return view;
 
